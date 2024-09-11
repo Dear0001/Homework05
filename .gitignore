@@ -4,7 +4,8 @@
 
 # Ignore ledger files
 /ledger/*
-
+# Ignore builder
+/builder*
 # Ignore crypto-config artifacts (contains sensitive private keys)
 crypto-config/*
 
