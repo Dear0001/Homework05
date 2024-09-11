@@ -48,6 +48,7 @@ services:
 
   orderer.example.com:
     container_name: orderer.example.com
+    user: root
     image: hyperledger/fabric-orderer:2.1
     dns_search: .
     environment:
@@ -77,6 +78,7 @@ services:
     networks:
       - test
     volumes:
+      - ./data/ledger:/var/hyperledger/production 
       - ./artifacts/genesis.block:/ledger/var/hyperledger/orderer/genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/ledger/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls:/ledger/var/hyperledger/orderer/tls
@@ -234,6 +236,7 @@ services:
     ports:
       - 7051:7051
     volumes:
+      - ./data/ledger:/var/hyperledger/production 
       - ./artifacts/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/crypto/peer/msp
       - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/crypto/peer/tls
       - /var/run/:/host/var/run/
