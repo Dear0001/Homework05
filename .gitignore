@@ -1,0 +1,41 @@
+# Ignore fabric binaries and tools
+/bin/*
+!bin/.gitkeep
+
+# Ignore ledger files
+/ledger/*
+
+# Ignore crypto-config artifacts (contains sensitive private keys)
+crypto-config/*
+
+# Ignore channel artifacts (contains sensitive channel configuration)
+artifact/*
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore compiled shell scripts or binaries
+*.sh~
+
+# Ignore generated config files
+# config/core.yaml
+# config/configtx.yaml
+# config/orderer.yaml
+
+# Ignore generated transaction files
+artifacts/*
+
+# Ignore node_modules if any frontend or node-related project is involved
+node_modules/
+
+# Ignore editor and OS-specific files
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.bak
+*.backup
+
+# Ignore docker and docker-compose artifacts if you are using Docker
+# docker-compose*.yaml
