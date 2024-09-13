@@ -10,7 +10,7 @@
 crypto-config/*
 
 # Ignore channel artifacts (contains sensitive channel configuration)
-artifact/*
+artifacts/*
 
 # Ignore temporary files
 *.log
