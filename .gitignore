@@ -1,5 +1,5 @@
 # Ignore fabric binaries and tools
-/bin/*
+# /bin/*
 !bin/.gitkeep
 
 # Ignore ledger files
@@ -23,7 +23,7 @@ artifacts/*
 # config/core.yaml
 # config/configtx.yaml
 # config/orderer.yaml
-
+data/*
 # Ignore generated transaction files
 artifacts/*
 
